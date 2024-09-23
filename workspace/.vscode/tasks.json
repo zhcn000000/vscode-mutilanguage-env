@@ -2,6 +2,33 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "type": "shell",
+      "label": "C/C++编译(msvc)",
+      "command": "cl",
+      "args": [
+        "/Zi",
+        "/EHsc",
+        "/Fo:",
+        "${workspaceFolder}\\temp\\${fileBasenameNoExtension}",
+        "/Fd:",
+        "${workspaceFolder}\\temp\\${fileBasenameNoExtension}",
+        "/Fe:",
+        "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
+        "${file}"
+      ],
+      "options": {
+        "shell": {
+          "executable": "cmd.exe",
+          "args": ["/C", "vsdevcmd", "&&"]
+        }
+      },
+      "problemMatcher": ["$msCompile"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
       "type": "cppbuild",
       "label": "C++编译(g++)",
       "command": "g++",
@@ -20,6 +47,22 @@
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "type": "cppbuild",
+      "label": "C编译(gcc)",
+      "command": "gcc",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
     },
     {
       "type": "cppbuild",
@@ -56,49 +99,6 @@
         "cwd": "${workspaceFolder}"
       },
       "problemMatcher": ["$gcc"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
-    },
-    {
-      "label": "C编译(gcc)",
-      "type": "cppbuild",
-      "command": "gcc",
-      "args": [
-        "-g",
-        "${file}",
-        "-o",
-        "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe"
-      ],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "problemMatcher": ["$gcc"]
-    },
-    {
-      "type": "shell",
-      "label": "C/C++编译(msvc)",
-      "command": "cl",
-      "args": [
-        "/Zi",
-        "/EHsc",
-        "/Fo:",
-        "${workspaceFolder}\\temp\\${fileBasenameNoExtension}",
-        "/Fd:",
-        "${workspaceFolder}\\temp\\${fileBasenameNoExtension}",
-        "/Fe:",
-        "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
-        "${file}"
-      ],
-      "options": {
-        "shell": {
-          "executable": "cmd.exe",
-          "args": ["/C", "vsdevcmd", "&&"]
-        }
-      },
-      "problemMatcher": ["$msCompile"],
       "group": {
         "kind": "build",
         "isDefault": true
@@ -175,25 +175,6 @@
         "${file}",
         "-o",
         "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe"
-      ],
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "problemMatcher": []
-    },
-    {
-      "type": "shell",
-      "label": "kotlin编译",
-      "command": "kotlinc",
-      "args": [
-        "${file}",
-        "-include-runtime",
-        "-d",
-        "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.class"
       ],
       "options": {
         "cwd": "${workspaceFolder}"

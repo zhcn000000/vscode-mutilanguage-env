@@ -36,33 +36,6 @@
       }
     },
     {
-      "type": "java",
-      "name": "Java",
-      "request": "launch",
-      "args": [
-        "<",
-        "${workspaceFolder}\\test\\in.txt",
-        ">",
-        "${workspaceFolder}\\test\\out.txt"
-      ],
-      "mainClass": "${fileBasenameNoExtension}",
-      "postDebugTask": "git提交"
-    },
-    {
-      "type": "java",
-      "name": "Java(compile)",
-      "request": "launch",
-      "args": [
-        "<",
-        "${workspaceFolder}\\test\\in.txt",
-        ">",
-        "${workspaceFolder}\\test\\out.txt"
-      ],
-      "mainClass": "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.class",
-      "preLaunchTask": "java编译",
-      "postDebugTask": "git提交"
-    },
-    {
       "name": "C/C++(msvc)",
       "type": "cppvsdbg",
       "request": "launch",
@@ -78,38 +51,6 @@
       "environment": [],
       "console": "integratedTerminal",
       "preLaunchTask": "C/C++编译(msvc)",
-      "postDebugTask": "git提交"
-    },
-    {
-      "name": "C++(clang++)",
-      "type": "lldb",
-      "request": "launch",
-      "program": "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
-      "args": [
-        "<",
-        "${workspaceFolder}\\test\\in.txt",
-        ">",
-        "${workspaceFolder}\\test\\out.txt"
-      ],
-      "cwd": "${workspaceFolder}",
-      "terminal": "integrated",
-      "preLaunchTask": "C++编译(clang++)",
-      "postDebugTask": "git提交"
-    },
-    {
-      "name": "C(clang)",
-      "type": "lldb",
-      "request": "launch",
-      "program": "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
-      "args": [
-        "<",
-        "${workspaceFolder}\\test\\in.txt",
-        ">",
-        "${workspaceFolder}\\test\\out.txt"
-      ],
-      "cwd": "${workspaceFolder}",
-      "terminal": "integrated",
-      "preLaunchTask": "C编译(clang)",
       "postDebugTask": "git提交"
     },
     {
@@ -177,6 +118,65 @@
       "postDebugTask": "git提交"
     },
     {
+      "name": "C++(clang++)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
+      "args": [
+        "<",
+        "${workspaceFolder}\\test\\in.txt",
+        ">",
+        "${workspaceFolder}\\test\\out.txt"
+      ],
+      "cwd": "${workspaceFolder}",
+      "terminal": "integrated",
+      "preLaunchTask": "C++编译(clang++)",
+      "postDebugTask": "git提交"
+    },
+    {
+      "name": "C(clang)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
+      "args": [
+        "<",
+        "${workspaceFolder}\\test\\in.txt",
+        ">",
+        "${workspaceFolder}\\test\\out.txt"
+      ],
+      "cwd": "${workspaceFolder}",
+      "terminal": "integrated",
+      "preLaunchTask": "C编译(clang)",
+      "postDebugTask": "git提交"
+    },
+    {
+      "type": "java",
+      "name": "Java",
+      "request": "launch",
+      "args": [
+        "<",
+        "${workspaceFolder}\\test\\in.txt",
+        ">",
+        "${workspaceFolder}\\test\\out.txt"
+      ],
+      "mainClass": "${fileBasenameNoExtension}",
+      "postDebugTask": "git提交"
+    },
+    {
+      "type": "java",
+      "name": "Java(compile)",
+      "request": "launch",
+      "args": [
+        "<",
+        "${workspaceFolder}\\test\\in.txt",
+        ">",
+        "${workspaceFolder}\\test\\out.txt"
+      ],
+      "mainClass": "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.class",
+      "preLaunchTask": "java编译",
+      "postDebugTask": "git提交"
+    },
+    {
       "name": "C#(dotnet)",
       "type": "coreclr",
       "request": "launch",
@@ -211,21 +211,6 @@
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
       "preLaunchTask": "C#编译(mono)",
-      "postDebugTask": "git提交"
-    },
-    {
-      "name": "PHP",
-      "type": "php",
-      "request": "launch",
-      "program": "${file}",
-      "args": [
-        "<",
-        "${workspaceFolder}\\test\\in.txt",
-        ">",
-        "${workspaceFolder}\\test\\out.txt"
-      ],
-      "cwd": "${workspaceFolder}",
-      "port": 9003,
       "postDebugTask": "git提交"
     },
     {
@@ -271,6 +256,21 @@
         "${workspaceFolder}\\test\\out.txt"
       ],
       "internalConsoleOptions": "neverOpen",
+      "postDebugTask": "git提交"
+    },
+    {
+      "name": "PHP",
+      "type": "php",
+      "request": "launch",
+      "program": "${file}",
+      "args": [
+        "<",
+        "${workspaceFolder}\\test\\in.txt",
+        ">",
+        "${workspaceFolder}\\test\\out.txt"
+      ],
+      "cwd": "${workspaceFolder}",
+      "port": 9003,
       "postDebugTask": "git提交"
     },
     {
