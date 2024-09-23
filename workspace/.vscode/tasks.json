@@ -22,6 +22,46 @@
       }
     },
     {
+      "type": "cppbuild",
+      "label": "C++编译(clang++)",
+      "command": "clang++",
+      "args": [
+        "-fcolor-diagnostics",
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "cppbuild",
+      "label": "C编译(clang)",
+      "command": "clang",
+      "args": [
+        "-fcolor-diagnostics",
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
       "label": "C编译(gcc)",
       "type": "cppbuild",
       "command": "gcc",

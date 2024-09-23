@@ -63,6 +63,56 @@
       "postDebugTask": "git提交"
     },
     {
+      "name": "C/C++(msvc)",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
+      "args": [
+        "<",
+        "${workspaceFolder}\\test\\in.txt",
+        ">",
+        "${workspaceFolder}\\test\\out.txt"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "console": "integratedTerminal",
+      "preLaunchTask": "C/C++编译(msvc)",
+      "postDebugTask": "git提交"
+    },
+    {
+      "name": "C++(clang++)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
+      "args": [
+        "<",
+        "${workspaceFolder}\\test\\in.txt",
+        ">",
+        "${workspaceFolder}\\test\\out.txt"
+      ],
+      "cwd": "${workspaceFolder}",
+      "terminal": "integrated",
+      "preLaunchTask": "C++编译(clang++)",
+      "postDebugTask": "git提交"
+    },
+    {
+      "name": "C(clang)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
+      "args": [
+        "<",
+        "${workspaceFolder}\\test\\in.txt",
+        ">",
+        "${workspaceFolder}\\test\\out.txt"
+      ],
+      "cwd": "${workspaceFolder}",
+      "terminal": "integrated",
+      "preLaunchTask": "C编译(clang)",
+      "postDebugTask": "git提交"
+    },
+    {
       "name": "C++(g++)",
       "type": "cppdbg",
       "request": "launch",
@@ -127,24 +177,6 @@
       "postDebugTask": "git提交"
     },
     {
-      "name": "C/C++(msvc)",
-      "type": "cppvsdbg",
-      "request": "launch",
-      "program": "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
-      "args": [
-        "<",
-        "${workspaceFolder}\\test\\in.txt",
-        ">",
-        "${workspaceFolder}\\test\\out.txt"
-      ],
-      "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
-      "environment": [],
-      "console": "integratedTerminal",
-      "preLaunchTask": "C/C++编译(msvc)",
-      "postDebugTask": "git提交"
-    },
-    {
       "name": "C#(dotnet)",
       "type": "coreclr",
       "request": "launch",
@@ -201,6 +233,22 @@
       "type": "debugpy",
       "request": "launch",
       "program": "${file}",
+      "python": "python",
+      "args": [
+        "<",
+        "${workspaceFolder}\\test\\in.txt",
+        ">",
+        "${workspaceFolder}\\test\\out.txt"
+      ],
+      "console": "integratedTerminal",
+      "postDebugTask": "git提交"
+    },
+    {
+      "name": "Python(pypy)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "python": "pypy",
       "args": [
         "<",
         "${workspaceFolder}\\test\\in.txt",

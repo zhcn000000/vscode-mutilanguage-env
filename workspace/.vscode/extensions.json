@@ -9,6 +9,7 @@
 
     // C/C++
     "ms-vscode.cpptools",
+    "vadimcn.vscode-lldb",
 
     // Java
     "redhat.java",
