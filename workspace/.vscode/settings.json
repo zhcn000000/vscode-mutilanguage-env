@@ -1,0 +1,8 @@
+{
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "files.associations": {
+    "string": "cpp"
+  },
+  "diffEditor.ignoreTrimWhitespace": true,
+  "csharp.debug.console": "integratedTerminal"
+}

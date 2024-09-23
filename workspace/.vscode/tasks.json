@@ -1,0 +1,183 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "C++编译(g++)",
+      "command": "g++",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "C编译(gcc)",
+      "type": "cppbuild",
+      "command": "gcc",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "type": "shell",
+      "label": "C/C++编译(msvc)",
+      "command": "cl",
+      "args": [
+        "/Zi",
+        "/EHsc",
+        "/Fo:",
+        "${workspaceFolder}\\temp\\${fileBasenameNoExtension}",
+        "/Fd:",
+        "${workspaceFolder}\\temp\\${fileBasenameNoExtension}",
+        "/Fe:",
+        "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
+        "${file}"
+      ],
+      "options": {
+        "shell": {
+          "executable": "cmd.exe",
+          "args": ["/C", "vsdevcmd", "&&"]
+        }
+      },
+      "problemMatcher": ["$msCompile"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "shell",
+      "label": "C#编译(dotnet)",
+      "command": "csc",
+      "args": [
+        "${file}",
+        "/target:exe",
+        "/out:${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
+        "/debug:full"
+      ],
+      "problemMatcher": ["$msCompile"],
+      "options": {
+        "shell": {
+          "executable": "cmd.exe",
+          "args": ["/C", "vsdevcmd", "&&"]
+        }
+      }
+    },
+    {
+      "type": "shell",
+      "label": "C#编译(mono)",
+      "command": "mcs",
+      "args": [
+        "${file}",
+        "/target:winexe",
+        "/out:${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
+        "/debug"
+      ],
+      "problemMatcher": ["$msCompile"]
+    },
+    {
+      "type": "shell",
+      "label": "java编译",
+      "command": "javac",
+      "args": ["${file}", "-d", "${workspaceFolder}\\bin"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "Go编译",
+      "command": "go",
+      "args": [
+        "build",
+        "-o",
+        "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe",
+        "${file}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "Rust编译",
+      "command": "rustc",
+      "args": [
+        "${file}",
+        "-o",
+        "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.exe"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "kotlin编译",
+      "command": "kotlinc",
+      "args": [
+        "${file}",
+        "-include-runtime",
+        "-d",
+        "${workspaceFolder}\\bin\\${fileBasenameNoExtension}.class"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "git提交",
+      "command": "${workspaceFolder}/.vscode/gitcommit",
+      "args": [
+        "${workspaceFolder}\\test\\out.txt",
+        "${workspaceFolder}\\test\\correct.txt",
+        "${file}",
+        "${fileBasename}"
+      ],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    }
+  ]
+}

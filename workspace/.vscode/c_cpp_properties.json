@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "name": "Win32",
+      // "includePath": [
+      //     "${workspaceFolder}/**",
+      //     "D:/VisualStudio/Enterprise/VC/Tools/MSVC/14.41.34120/include/**",
+      //     "C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/**"
+      // ],
+      "includePath": ["${workspaceFolder}/**"],
+      "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
+      "windowsSdkVersion": "10.0.22621.0",
+      "compilerPath": "D:/VisualStudio/Enterprise/VC/Tools/MSVC/14.41.34120/bin/Hostx64/x64/cl.exe",
+      "cStandard": "c23",
+      "cppStandard": "c++23",
+      "intelliSenseMode": "windows-msvc-x64"
+    },
+    {
+      "name": "Win32gcc",
+      "includePath": ["${workspaceFolder}/**"],
+      "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
+      "compilerPath": "F:/Devkits/Cpp/msys64/ucrt64/bin/gcc.exe",
+      "cStandard": "c23",
+      "cppStandard": "c++23",
+      "intelliSenseMode": "gcc-x64"
+    }
+  ],
+  "version": 4
+}
