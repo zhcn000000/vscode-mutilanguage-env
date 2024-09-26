@@ -2,7 +2,7 @@
 
 ## 支持语言
 
-_支持语言`C` `C++` `java` `python` `C#` `Ruby` `Rust` `Go`单文件运行及调试_</br>
+_支持语言`C` `C++` `java` `python` `C#` `PHP` `Ruby` `Rust` `Go`单文件运行及调试_</br>
 
 支持自动根据文件扩展名切换调试配置文件,依赖扩展(auto debug)
 
